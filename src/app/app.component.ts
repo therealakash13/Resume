@@ -10,5 +10,5 @@ import { ResumeComponent } from './resume/resume.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'resume1';
+  title = 'My Resume';
 }

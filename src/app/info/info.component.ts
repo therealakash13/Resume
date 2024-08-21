@@ -33,4 +33,11 @@ export class InfoComponent {
   toggleHobbies() {
     this.isHobbiesVisible = !this.isHobbiesVisible;
   }
+
+  downloadPDF() {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Resume.pdf';
+    link.click();
+  }
 }

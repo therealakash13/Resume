@@ -1,4 +1,4 @@
-<div class="w-full h-full text-white px-2 py-1">
+<div class="w-full h-full text-white px-2 py-1 relative">
   <div class="h-[10%]">
     <span
       class="text-5xl font-bold font-pacifico underline [text-decoration-color:#f87171] underline-offset-8"
@@ -55,5 +55,14 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="">
+    <button
+      class="bg-[#f87171] px-4 py-2 flex items-center hover:scale-110 transition-all ease-in-out rounded-3xl absolute bottom-4 right-4 md:bottom-8 md:right-8"
+      (click)="downloadPDF()"
+    >
+      <img src="/download.png" class="w-10" alt="" />
+      Download PDF
+    </button>
   </div>
 </div>

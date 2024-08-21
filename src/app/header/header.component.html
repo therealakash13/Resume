@@ -1,0 +1,30 @@
+<nav class="w-full flex flex-row items-center justify-end text-white">
+  <div class="relative w-[50%]">
+    <ul
+      class="font-semibold bg-gray-600 py-3 rounded-b-2xl flex absolute items-center w-full justify-evenly"
+    >
+      <a
+        routerLink="/"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-[#f87171] scale-110 underline underline-offset-8"
+        ><li class="hover:cursor-pointer">About</li></a
+      >
+      <a
+        routerLink="/resume"
+        routerLinkActive="text-[#f87171] scale-110 underline underline-offset-8"
+        ><li class="hover:cursor-pointer">Resume</li></a
+      >
+      <a
+        routerLink="/portfolio"
+        routerLinkActive="text-[#f87171] scale-110 underline underline-offset-8"
+        ><li class="hover:cursor-pointer">Portfolio</li></a
+      >
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-[#f87171] scale-110 underline underline-offset-8"
+        ><li class="hover:cursor-pointer">Contact</li></a
+      >
+    </ul>
+  </div>
+</nav>

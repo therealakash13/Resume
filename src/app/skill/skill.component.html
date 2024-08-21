@@ -1,0 +1,30 @@
+<div class="w-full flex flex-row rounded-3xl bg-gray-600">
+  <div class="w-[20%] px-4 py-3">
+    <ul
+      class="flex flex-col items-start space-y-10 ml-3 font-bold font-poppins"
+    >
+      <li class="cursor-pointer" (click)="setLanguage()">Languages</li>
+      <li class="cursor-pointer" (click)="setFramework()">Framewors</li>
+      <li class="cursor-pointer" (click)="setTechnologies()">Technologies</li>
+      <li class="cursor-pointer" (click)="setTools()">Tools</li>
+    </ul>
+  </div>
+  <div class="w-[80%] px-4 py-3">
+    @for (skill of skills; track $index) {
+    <div class="flex flex-col">
+      <div class="flex justify-between items-center px-8 font-poppins">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.rank + " %" }}</span>
+      </div>
+      <div class="p-4 overflow-y-auto">
+        <div class="w-full bg-gray-200 rounded-full h-4">
+          <div
+            class="bg-[#f87171] h-4 rounded-full"
+            [style.width.%]="skill.rank"
+          ></div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="w-full h-full text-white px-2 py-1">
+  <span
+    class="text-5xl font-bold font-pacifico underline [text-decoration-color:#f87171] underline-offset-8"
+    >My Portfolio</span
+  >
+  <div
+    class="w-full h-[92%] mt-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-700"
+  >
+    <div class="container mx-auto p-4 md:p-6">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <div
+          *ngFor="let project of projects"
+          class="bg-gray-600 shadow-md rounded-3xl overflow-hidden flex flex-col group hover:scale-105 hover:z-10 transition-all ease-in-out"
+        >
+          <img
+            [src]="project.imageUrl"
+            alt="{{ project.title }}"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="text-xl font-semibold mb-2 text-gray-100">
+              {{ project.title }}
+            </h3>
+            <p
+              class="text-gray-300 mb-4 flex-grow overflow-hidden transition-all ease-in-out group-hover:whitespace-normal group-hover:max-h-none group-hover:overflow-visible"
+              [ngClass]="{ truncate: !isHovered }"
+            >
+              {{ project.description }}
+            </p>
+            <div class="mt-auto">
+              <a
+                *ngIf="project.link"
+                href="{{ project.link }}"
+                class="text-[#f87171] hover:underline"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
